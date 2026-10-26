@@ -2,278 +2,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Gujarat | Tourism</title>
-    <meta name="description" content="Explore the beautiful tourist destinations of Vadodara and Ahmedabad, Gujarat.">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Gujarat | Tourism</title>
+  <meta name="description" content="Explore tourist destinations in Vadodara and Ahmedabad, Gujarat.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      margin: 25px 0;
+    }
+    .photo-card {
+      overflow: hidden;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 4px 15px #00000018;
+    }
+    .photo-card img {
+      display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .photo-card h3, .photo-card p {
+      margin: 12px 15px;
+    }
+    .photo-card p { padding-bottom: 10px; }
+    .photo-card a { color: inherit; text-decoration: none; }
+    .photo-card a:hover { text-decoration: underline; }
+    .photo-section { padding: 35px 6%; }
+    .photo-section:nth-of-type(even) { background: #f5f5f5; }
+    .photo-section > p { text-align: center; }
+  </style>
 </head>
-
 <body>
 
 <header class="site-header">
-    <nav class="navbar">
-        <a href="#home" class="logo">Explore Gujarat<span>.</span></a>
-
-        <button class="menu-toggle" id="menuToggle"
-                aria-label="Toggle navigation" aria-expanded="false">
-            ☰
-        </button>
-
-        <div class="nav-links" id="navLinks">
-            <a href="#home">Home</a>
-            <a href="#destinations">Destinations</a>
-            <a href="#vadodara">Vadodara</a>
-            <a href="#ahmedabad">Ahmedabad</a>
-            <a href="#about">About</a>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <a href="#home" class="logo">Explore Gujarat<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#vadodara">Vadodara</a>
+      <a href="#ahmedabad">Ahmedabad</a>
+      <a href="#other-places">Other Places</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
 </header>
 
 <main>
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <span class="eyebrow">DISCOVER THE BEAUTY OF GUJARAT</span>
-            <h1>Explore Gujarat,<br>Explore Incredible Places</h1>
-            <p>
-                Discover royal palaces, historic monuments, peaceful lakes
-                and the rich culture of Vadodara and Ahmedabad.
-            </p>
-            <a href="#destinations" class="btn">Explore Destinations ↓</a>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="eyebrow">DISCOVER THE BEAUTY OF GUJARAT</span>
+      <h1>Explore Gujarat,<br>Explore Incredible Places</h1>
+      <p>Discover royal palaces, historic monuments, peaceful lakes and the rich culture of Gujarat.</p>
+      <a href="#destinations" class="btn">Explore Destinations ↓</a>
+    </div>
+  </section>
+
+  <section class="section" id="destinations">
+    <div class="section-heading">
+      <span class="eyebrow">YOUR NEXT ADVENTURE</span>
+      <h2>Explore Our Destinations</h2>
+      <p>Discover the famous attractions of Vadodara, Ahmedabad and other places in Gujarat.</p>
+    </div>
+    <div class="destination-grid">
+      <article class="destination-card">
+        <img src="laxmi-palace.jpeg" alt="Laxmi Vilas Palace" class="destination-image">
+        <div class="card-content">
+          <span class="category">CULTURE &amp; HERITAGE</span>
+          <h3>Vadodara</h3>
+          <p>Explore royal architecture, gardens and the cultural charm of Baroda.</p>
+          <a href="#vadodara" class="btn">Explore Vadodara</a>
         </div>
-    </section>
-
-    <!-- DESTINATION INTRODUCTION -->
-    <section class="section" id="destinations">
-        <div class="section-heading">
-            <span class="eyebrow">YOUR NEXT ADVENTURE</span>
-            <h2>Explore Our Destinations</h2>
-            <p>Choose a city and discover its famous tourist attractions.</p>
+      </article>
+      <article class="destination-card">
+        <img src="sabarmati-riverfront.jpeg" alt="Sabarmati Riverfront" class="destination-image">
+        <div class="card-content">
+          <span class="category">HISTORY &amp; CITY LIFE</span>
+          <h3>Ahmedabad</h3>
+          <p>Discover historic landmarks, lively streets and beautiful riverside views.</p>
+          <a href="#ahmedabad" class="btn">Explore Ahmedabad</a>
         </div>
+      </article>
+    </div>
+  </section>
 
-        <div class="destination-grid">
+  <section class="photo-section" id="vadodara">
+    <div class="section-heading">
+      <span class="eyebrow">CULTURE &amp; HERITAGE</span>
+      <h2>Explore Vadodara</h2>
+      <p>Discover the royal heritage and beautiful attractions of Baroda.</p>
+    </div>
+    <div class="photo-grid">
+      <article class="photo-card">
+        <img src="laxmi-palace.jpeg" alt="Laxmi Vilas Palace">
+        <h3>Laxmi Vilas Palace</h3>
+        <p>A magnificent palace known for its grand royal architecture.</p>
+      </article>
+      <article class="photo-card">
+        <img src="sayaji-baug.jpeg" alt="Sayaji Baug">
+        <h3>Sayaji Baug</h3>
+        <p>A popular garden with green spaces and family attractions.</p>
+      </article>
+      <article class="photo-card">
+        <img src="kirti-mandir.jpeg" alt="Kirti Mandir">
+        <h3>Kirti Mandir</h3>
+        <p>A historic monument associated with the Gaekwad royal family.</p>
+      </article>
+      <article class="photo-card">
+        <img src="fatesingh-museum.jpeg" alt="Fatesingh Museum">
+        <h3>Fatesingh Museum</h3>
+        <p>Explore artworks and historical collections.</p>
+      </article>
+      <article class="photo-card">
+        <img src="atapi-wonderland.jpeg" alt="AATAPI Wonderland">
+        <h3>AATAPI Wonderland</h3>
+        <p>A theme park offering rides and entertainment.</p>
+      </article>
+      <article class="photo-card">
+        <img src="sursagar-lake.jpeg" alt="Sursagar Lake">
+        <h3>Sursagar Lake</h3>
+        <p>A well-known lake in the heart of Vadodara.</p>
+      </article>
+      <article class="photo-card">
+        <img src="tambekar-wada.jpeg" alt="Tambekar Wada">
+        <h3>Tambekar Wada</h3>
+        <p>A historic residence known for its traditional architecture.</p>
+      </article>
+      <article class="photo-card">
+        <img src="chandod-sangam.jpeg" alt="Chandod Sangam">
+        <h3>Chandod Sangam</h3>
+        <p>A scenic riverside destination in Gujarat.</p>
+      </article>
+    </div>
+  </section>
 
-            <article class="destination-card">
-               <img src="laxmi-palace.jpeg"
-     alt="Laxmi Vilas Palace in Vadodara">
-                     class="destination-image">
+  <section class="photo-section" id="ahmedabad">
+    <div class="section-heading">
+      <span class="eyebrow">HISTORY &amp; CITY LIFE</span>
+      <h2>Explore Ahmedabad</h2>
+      <p>Discover historic landmarks, riverside views and architectural treasures.</p>
+    </div>
+    <div class="photo-grid">
+      <article class="photo-card">
+        <img src="sabarmati-riverfront.jpeg" alt="Sabarmati Riverfront">
+        <h3>Sabarmati Riverfront</h3>
+        <p>A popular waterfront for riverside walks and city views.</p>
+      </article>
+      <article class="photo-card">
+        <img src="sabarmati-ashram.jpeg" alt="Sabarmati Ashram">
+        <h3>Sabarmati Ashram</h3>
+        <p>A historic ashram associated with Mahatma Gandhi.</p>
+      </article>
+      <article class="photo-card">
+        <img src="adalaj-stepwell.jpeg" alt="Adalaj Stepwell">
+        <h3>Adalaj Stepwell</h3>
+        <p>A remarkable stepwell celebrated for its detailed stone carvings.</p>
+      </article>
+      <article class="photo-card">
+        <img src="kankaria-lake.jpeg" alt="Kankaria Lake">
+        <h3>Kankaria Lake</h3>
+        <p>A popular recreational destination with lakeside attractions.</p>
+      </article>
+    </div>
+  </section>
 
-                <div class="card-content">
-                    <span class="category">CULTURE &amp; HERITAGE</span>
-                    <h3>Vadodara</h3>
-                    <p>
-                        Discover royal architecture, beautiful gardens
-                        and the cultural charm of Baroda.
-                    </p>
-                    <p class="must-visit">
-                        <strong>Must-visit places</strong><br>
-                        Laxmi Vilas Palace · Sayaji Baug · Kirti Mandir
-                    </p>
-                    <a href="#vadodara" class="btn">Explore Vadodara</a>
-                </div>
-            </article>
+  <section class="photo-section" id="other-places">
+    <div class="section-heading">
+      <span class="eyebrow">MORE TO DISCOVER</span>
+      <h2>Other Places in Gujarat</h2>
+      <p>Explore more destinations from your photo collection.</p>
+    </div>
+    <div class="photo-grid">
+      <article class="photo-card">
+        <img src="mandvi-gate.jpeg" alt="Mandvi Gate">
+        <h3>Mandvi Gate</h3>
+        <p>A historic landmark in Vadodara.</p>
+      </article>
+      <article class="photo-card">
+        <img src="por-baliyadev.jpeg" alt="Por Baliyadev">
+        <h3>Por Baliyadev</h3>
+        <p>A local destination in Gujarat.</p>
+      </article>
+      <article class="photo-card">
+        <img src="wadhwan-lake.jpeg" alt="Wadhwan Lake">
+        <h3>Wadhwan Lake</h3>
+        <p>A lake destination in Gujarat.</p>
+      </article>
+    </div>
+  </section>
 
-            <article class="destination-card">
-                <img src="image/sabarmati-riverfront.jpeg"
-                     alt="Sabarmati Riverfront in Ahmedabad"
-                     class="destination-image">
-
-                <div class="card-content">
-                    <span class="category">HISTORY &amp; CITY LIFE</span>
-                    <h3>Ahmedabad</h3>
-                    <p>
-                        Experience historic monuments, lively streets
-                        and the heritage of Gujarat's largest city.
-                    </p>
-                    <p class="must-visit">
-                        <strong>Must-visit places</strong><br>
-                        Sabarmati Riverfront · Sabarmati Ashram ·
-                        Adalaj Stepwell · Kankaria Lake
-                    </p>
-                    <a href="#ahmedabad" class="btn">Explore Ahmedabad</a>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- VADODARA SECTION -->
-    <section class="section city-section" id="vadodara">
-        <div class="section-heading">
-            <span class="eyebrow">CULTURE &amp; HERITAGE</span>
-            <h2>Explore Vadodara</h2>
-            <p>Discover the royal heritage and beautiful attractions of Baroda.</p>
-        </div>
-
-        <div class="places-grid">
-
-            <article class="place-card">
-                <img src="images/vadodara/laxmi-palace.jpeg"
-                     alt="Laxmi Vilas Palace" class="place-image">
-                <div class="card-content">
-                    <span class="category">Royal Heritage</span>
-                    <h3>Laxmi Vilas Palace</h3>
-                    <p>A magnificent royal palace known for its grand architecture and beautiful grounds.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Laxmi+Vilas+Palace+Vadodara" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-            <article class="place-card">
-                <img src="images/vadodara/sayaji-baug.jpeg"
-                     alt="Sayaji Baug" class="place-image">
-                <div class="card-content">
-                    <span class="category">Nature &amp; Recreation</span>
-                    <h3>Sayaji Baug</h3>
-                    <p>A popular city garden with green spaces and attractions for visitors of all ages.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Sayaji+Baug+Vadodara" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-            <article class="place-card">
-                <img src="images/vadodara/kirti-mandir.jpeg"
-                     alt="Kirti Mandir" class="place-image">
-                <div class="card-content">
-                    <span class="category">Historic Monument</span>
-                    <h3>Kirti Mandir</h3>
-                    <p>A notable monument associated with the Gaekwad royal family and Vadodara's history.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Kirti+Mandir+Vadodara" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-            <article class="place-card">
-                <img src="images/vadodara/fatesingh-museum.jpeg"
-                     alt="Fatesingh Museum" class="place-image">
-                <div class="card-content">
-                    <span class="category">Art &amp; History</span>
-                    <h3>Fatesingh Museum</h3>
-                    <p>Explore artworks and historical collections within the Laxmi Vilas Palace estate.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Fatesingh+Museum+Vadodara" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-            <article class="place-card">
-                <img src="images/vadodara/atapi-wonderland.jpeg"
-                     alt="AATAPI Wonderland" class="place-image">
-                <div class="card-content">
-                    <span class="category">Entertainment</span>
-                    <h3>AATAPI Wonderland</h3>
-                    <p>A theme park offering rides and entertainment for families and friends.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=AATAPI+Wonderland+Vadodara" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-            <article class="place-card">
-                <img src="images/vadodara/sursagar-lake.jpeg"
-                     alt="Sursagar Lake" class="place-image">
-                <div class="card-content">
-                    <span class="category">Lake &amp; City Life</span>
-                    <h3>Sursagar Lake</h3>
-                    <p>A well-known lake in the heart of Vadodara, popular for its city views.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Sursagar+Lake+Vadodara" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-            <article class="place-card">
-                <img src="images/vadodara/tambekar-wada.jpeg"
-                     alt="Tambekar Wada" class="place-image">
-                <div class="card-content">
-                    <span class="category">Historic Architecture</span>
-                    <h3>Tambekar Wada</h3>
-                    <p>A historic residence known for its traditional architecture and painted interiors.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Tambekar+Wada+Vadodara" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-            <article class="place-card">
-                <img src="images/vadodara/chandod-sangam.jpeg"
-                     alt="Chandod Triveni Sangam" class="place-image">
-                <div class="card-content">
-                    <span class="category">Religious &amp; Scenic</span>
-                    <h3>Chandod Triveni Sangam</h3>
-                    <p>A revered riverside destination associated with the meeting of rivers in Gujarat.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Chandod+Triveni+Sangam+Gujarat" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- AHMEDABAD SECTION -->
-    <section class="section city-section alternate" id="ahmedabad">
-        <div class="section-heading">
-            <span class="eyebrow">HISTORY &amp; CITY LIFE</span>
-            <h2>Explore Ahmedabad</h2>
-            <p>Discover historic landmarks, riverside views and peaceful attractions.</p>
-        </div>
-
-        <div class="places-grid">
-
-            <article class="place-card">
-                <img src="images/ahmedabad/sabarmati-riverfront.jpeg"
-                     alt="Sabarmati Riverfront" class="place-image">
-                <div class="card-content">
-                    <span class="category">Riverside</span>
-                    <h3>Sabarmati Riverfront</h3>
-                    <p>A popular waterfront destination for riverside walks and views of the city.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Sabarmati+Riverfront+Ahmedabad" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-            <article class="place-card">
-                <img src="images/ahmedabad/sabarmati-ashram.jpeg"
-                     alt="Sabarmati Ashram" class="place-image">
-                <div class="card-content">
-                    <span class="category">History &amp; Freedom</span>
-                    <h3>Sabarmati Ashram</h3>
-                    <p>Visit the historic ashram associated with Mahatma Gandhi and India's freedom movement.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Sabarmati+Ashram+Ahmedabad" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-            <article class="place-card">
-                <img src="images/ahmedabad/adalaj-stepwell.jpeg"
-                     alt="Adalaj Stepwell" class="place-image">
-                <div class="card-content">
-                    <span class="category">Architecture</span>
-                    <h3>Adalaj Stepwell</h3>
-                    <p>A remarkable stepwell celebrated for its intricate stone carvings and traditional design.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Adalaj+Stepwell+Gujarat" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-            <article class="place-card">
-                <img src="images/ahmedabad/kankaria-lake.jpeg"
-                     alt="Kankaria Lake" class="place-image">
-                <div class="card-content">
-                    <span class="category">Lake &amp; Recreation</span>
-                    <h3>Kankaria Lake</h3>
-                    <p>A well-known recreational destination with lakeside views and family activities.</p>
-                    <a class="location-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Kankaria+Lake+Ahmedabad" target="_blank" rel="noopener noreferrer">📍 View Location</a>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="about-section" id="about">
-        <div class="section-heading">
-            <span class="eyebrow">ABOUT THIS WEBSITE</span>
-            <h2>Discover Gujarat with Us</h2>
-            <p>
-                This tourism website introduces visitors to the heritage,
-                culture, architecture and attractions of Vadodara and Ahmedabad.
-                Explore each destination and use its location link to plan a visit.
-            </p>
-        </div>
-    </section>
+  <section class="about-section" id="about">
+    <div class="section-heading">
+      <span class="eyebrow">ABOUT THIS WEBSITE</span>
+      <h2>Discover Gujarat with Us</h2>
+      <p>This tourism website introduces the heritage, culture, architecture and attractions of Gujarat. Explore the photographs and discover places to visit.</p>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
-    <p>© <span id="currentYear"></span> Explore Gujarat | Tourism Project</p>
-    <a href="#home">Back to top ↑</a>
+  <p>© <span id="currentYear"></span> Explore Gujarat | Tourism Project</p>
+  <a href="#home">Back to top ↑</a>
 </footer>
 
 </body>
